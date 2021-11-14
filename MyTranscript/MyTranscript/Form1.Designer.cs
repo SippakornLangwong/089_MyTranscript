@@ -51,7 +51,7 @@ namespace MyTranscript
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(250, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 39);
+            this.label1.Size = new System.Drawing.Size(299, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "My university name";
             // 
@@ -61,7 +61,7 @@ namespace MyTranscript
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(277, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(263, 39);
+            this.label2.Size = new System.Drawing.Size(255, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "My faculty name";
             // 
@@ -151,6 +151,7 @@ namespace MyTranscript
             this.buttonAddCourse.TabIndex = 11;
             this.buttonAddCourse.Text = "Add";
             this.buttonAddCourse.UseVisualStyleBackColor = true;
+            this.buttonAddCourse.Click += new System.EventHandler(this.AddGrade);
             // 
             // dataGridViewCourse
             // 
