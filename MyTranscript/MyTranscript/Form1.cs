@@ -27,7 +27,7 @@ namespace MyTranscript
             year1Sem1 = new List<Course>();
             year1Sem2 = new List<Course>();
             year2Sem1 = new List<Course>();
-            year2Sem2 = new List<Course>(); 
+            year2Sem2 = new List<Course>();
             year2Sem3 = new List<Course>();
             year3Sem1 = new List<Course>();
             year3Sem2 = new List<Course>();
@@ -92,13 +92,166 @@ namespace MyTranscript
                     break;
             }
         }
+
+        private void WriteToFile(string filename, StringBuilder sb)
+        {
+            Console.WriteLine(sb.ToString());
+            System.IO.File.WriteAllText(filename, sb.ToString());
+        }
+
+        private void SaveFile(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            int counter;
+            //// prepare data
+
+            // write header
+            sb.AppendLine(labelUniversityName.Text);
+            sb.AppendLine(labelFacultyName.Text);
+
+
+            // Year 1 Semester 1
+
+            if (year1Sem1.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 1 Semester 1");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year1Sem1)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 1 Semester 2
+            if (year1Sem2.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 1 Semester 2");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year1Sem2)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 2 Semester 1
+            // สามารถคัดลอกประโยค if มาทั้งหมด แล้วเปลี่ยนขื่อ  list 
+            // ให้เป็นหน้าที่ของนักศึกษาในการทำเพิ่ม
+            if (year2Sem1.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 2 Semester 1");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year2Sem1)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+            // Year 2 Semester 2
+            if (year2Sem2.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 2 Semester 2");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year2Sem2)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+            // Year 2 Semester 3
+            if (year2Sem3.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 2 Semester 3");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year2Sem3)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+            // Year 3 Semester 1
+            if (year3Sem1.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 3 Semester 1");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year3Sem1)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 3 Semester 2
+            if (year3Sem2.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 3 Semester 2");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year3Sem2)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 4 Semester 1
+            if (year4Sem1.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 4 Semester 1");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year4Sem1)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            // Year 4 Semester 2
+            if (year4Sem2.Count > 0) // เขียนลงไฟล์เมื่อมีข้อมูลใน list เท่านั้น
+            {
+                sb.AppendLine("");
+                sb.AppendLine("Year 4 Semester 2");
+                sb.AppendLine("No, Course ID, Course Name, Credit, Grade");
+                counter = 1;
+                foreach (var item in year4Sem2)
+                {
+                    sb.AppendLine(counter.ToString() + ", " + item.ToString());
+                    counter++;
+                }
+            }
+
+            string filename = "mygrade.csv";
+            WriteToFile(filename, sb);
+        }
     }
+
     class Course
         {
             public string CourseID { get; set; }
             public string CourseName { get; set; }
             public string CourseCredit { get; set; }
             public string Grade { get; set; }
-        }
 
+            public override string ToString()
+            {
+                return CourseID + "," + CourseName + "," + CourseCredit + "," + Grade;
+            }
+
+        }
 }
