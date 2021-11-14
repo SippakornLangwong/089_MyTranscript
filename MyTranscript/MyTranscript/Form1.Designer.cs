@@ -64,7 +64,6 @@ namespace MyTranscript
             this.label2.Size = new System.Drawing.Size(263, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "My faculty name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // groupBox1
             // 
@@ -75,7 +74,6 @@ namespace MyTranscript
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new course";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label3
             // 
@@ -85,7 +83,6 @@ namespace MyTranscript
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Course ID";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -113,7 +110,6 @@ namespace MyTranscript
             this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Grade";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBoxCourseID
             // 
@@ -122,7 +118,6 @@ namespace MyTranscript
             this.textBoxCourseID.Size = new System.Drawing.Size(100, 22);
             this.textBoxCourseID.TabIndex = 7;
             this.textBoxCourseID.Text = "123456";
-            this.textBoxCourseID.TextChanged += new System.EventHandler(this.textBoxCourseID_TextChanged);
             // 
             // textBoxCourseName
             // 
@@ -147,7 +142,6 @@ namespace MyTranscript
             this.textBoxGrade.Size = new System.Drawing.Size(100, 22);
             this.textBoxGrade.TabIndex = 10;
             this.textBoxGrade.Text = "B+";
-            this.textBoxGrade.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // buttonAddCourse
             // 

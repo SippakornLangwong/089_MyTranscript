@@ -16,35 +16,13 @@ namespace MyTranscript
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCourseID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
+        class Course
+        {
+            public string CourseID { get; set; }
+            public string CourseName { get; set; }
+            public string CourseCredit { get; set; }
+            public string Grade { get; set; }
+        }
+
 }
